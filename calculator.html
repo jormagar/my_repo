@@ -5,11 +5,12 @@
   <title>Calculator</title>
   <meta charset="utf-8">
   <script type="text/javascript">
-    function cube() {
+    function pow(powTo) {
       var num = document.getElementById("n1");
-      num.value = Math.pow(num.value, 3);
+      num.value = Math.pow(num.value || 0, powTo);
     }
-    function sin(){
+
+    function sin() {
       var num = document.getElementById("n1");
       num.value = Math.sin(num.value);
     }
@@ -23,7 +24,8 @@
     <input type="text" id="n1">
   </p>
   <p>
-    <button onclick="cube()">x^3</button>
+    <button onclick="pow(3)">x^3</button>
+    <button onclick="pow(4)">x^4</button>
     <button onclick="sin()">sin(x)</button>
   </p>
 </body>
